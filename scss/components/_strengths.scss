@@ -1,0 +1,48 @@
+.strengths{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width:1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .groops{
+      width: 100%;
+      height: 120px;
+      background: $background-block;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      display: flex;
+  }
+  .peculiarity{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $text-color;
+    line-height: 1.16;
+    margin-bottom: 10px;
+  }
+
+  .groop {
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    fill: $text-color
+  }
+  .functions {
+    font-weight: 400;
+    line-height: 1.7;
+    color:  $link-color;
+    text-align: left;
+  }
+  .about_us{
+    @media screen and (min-width:768px) {
+      display: grid;
+      grid-template: auto auto/1fr 1fr;
+      justify-content: center;
+      column-gap: 30px;
+    }
+    @media screen and (min-width:1200px) {
+      grid-template: auto/270px 270px 270px 270px;
+    }
+  }
+}

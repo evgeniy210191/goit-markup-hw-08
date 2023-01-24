@@ -1,0 +1,95 @@
+.visually_hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  @media screen and (min-width:480px){
+    width:480px;
+  }
+  @media screen and (min-width:768px){
+    width:768px;
+  }
+
+  @media screen and (min-width:1200px){
+    width:1200px;
+  }
+}
+
+.contacts {
+  .change_svg {
+    fill: $svg-color;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: fill 250ms $cub;
+  }
+}
+
+.change{
+  transition: color 250ms $cub;
+  &:hover, &:focus{
+    color:$text-hover;
+  }
+  &:hover .change_svg, &:focus .change_svg{
+    fill:$svg-hover;
+  }
+}
+
+.logo {
+  font-family: $font-raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-span {
+    color:$logo-color-first;
+  }
+
+
+.header-section{
+  color: $text-color;
+  line-height: 1.16;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+  .links{
+    border-radius: 50%;
+    display: flex;
+    width: 44px;
+    height: 44px;
+    transition: background 250ms $cub;
+    &:hover .link, &:focus .link{
+      fill:$white;
+    }
+    &:hover, &:focus{
+      background: $text-hover;
+      outline: none;
+    }
+  }
+  .link {
+    width: 20px;
+    height: 20px;
+    transition: fill 250ms $cub;
+    margin: auto;
+  }
+  .link_network {
+    display: grid;
+    grid-template: 44px/repeat(4, 44px);
+    justify-content: center;
+    column-gap: 10px;
+    font-size: 0;
+  }

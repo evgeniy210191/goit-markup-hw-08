@@ -1,0 +1,48 @@
+.company {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width:1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .regular_customers {
+    display: grid;
+    grid-template: 92px 92px 92px/ 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
+    justify-content: center;
+    @media screen and (min-width:768px){
+      grid-template: 92px 92px/1fr 1fr 1fr;
+    }
+    @media screen and (min-width:1200px) {
+      grid-template: 92px/repeat(6, 170px);
+    }
+  }
+}
+
+.regular_customer{
+  &:hover .icon {
+    fill:$svg-hover;
+    margin: auto;
+  }
+  .icon{
+    fill:$svg-color-main;
+    transition:fill 250ms $cub;
+    margin:auto;
+  }
+  .social {
+    border: 1px solid $borderonclient;
+    transition: border 250ms $cub;
+    border-radius: 4px;
+    display: flex;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    &:hover, &:focus{
+      border: 1px solid $text-hover;
+    }
+    &:focus .icon{
+      fill:$svg-hover;
+    }
+  }
+}

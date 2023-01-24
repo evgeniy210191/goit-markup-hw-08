@@ -1,0 +1,202 @@
+#backdrop {
+  position: fixed;
+  background: rgba(0, 0, 0, .5);
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 250ms linear;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms linear;
+  }
+  .order {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.85;
+    text-align: center;
+    letter-spacing: 0.06em;
+    width: 200px;
+    padding: 10px;
+    color:  $white;
+    background: $button-background;
+    border: none;
+    border-radius: 4px;
+    transition: box-shadow 250ms $cub,
+    background-color 250ms $cub;
+    &:hover{
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      background-color: $button-hover;
+      outline: none;
+    }
+  }
+  #modal {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    top: 50%;
+    padding: 40px;
+    width: 90%;
+    height: auto;
+    background: $white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    text-align: center;
+    transition: transform 250ms linear;
+    &.is-hidden {
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 30%;
+      transition: transform 250ms linear 50ms,
+      border-radius 250ms linear 50ms;
+    }
+    @media screen and (min-width:768px){
+      width:450px;
+    }
+    @media screen and (min-width:1200px){
+    width: 528px;
+    height: 581px;
+    }
+  }
+  #close {
+    position: absolute;
+    display: flex;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    &:hover .close-svg, &:focus .close-svg{
+      fill:$svg-hover
+    }
+  }
+  .close-svg {
+    margin: auto;
+    transition: fill 250ms $cub;
+  }
+  .header-modal {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: $text-color;
+  }
+}
+.wrapper{
+  width: 100%;
+  position: relative;
+  margin-top: 28px;
+  .input-modal {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 42px;
+    &:focus+span svg {
+      fill: $svg-hover;
+      transition: fill 250ms $cub;
+    }
+    &:focus{
+      border: 1px solid #2196F3;
+      outline: none;
+      transition: border 250ms $cub
+    }
+  }
+  .label-modal {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: $link-color;
+    position: absolute;
+    top: -12px;
+    transform: translateY(-4px);
+    left: 0;
+  }
+  .textarea-modal{
+    resize: none;
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 16px;
+    &:focus{
+      border: 1px solid #2196F3;
+      outline: none;
+      transition: border 250ms $cub
+    }
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.01em;
+    }
+  }
+  .sprite-modal {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(14px, -50%);
+  }
+}
+.check {
+  margin: 20px 0 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: $link-color;
+  .checkbox{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-progress-appearance: none;
+    position: absolute;
+    &:focus+label:before {
+      border: 2px solid $text-hover
+    }
+    &[type="checkbox"]:checked+label:before {
+      background: url(../input/check.svg);
+      border: none;
+    }
+  }
+
+  .label-check {
+    position: relative;
+    padding: 0 0 0 30px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: $link-color;
+    &:before {
+      content: "";
+      width: 16px;
+      height: 15px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      border: 2px solid $text-color;
+      border-radius: 3px;
+      overflow: hidden;
+      transform: translateY(-50%);
+    }
+  }
+  .condition {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    border-bottom:  $text-hover 1px solid;
+    color:  $text-hover;
+  }
+
+}

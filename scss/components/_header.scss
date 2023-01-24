@@ -1,0 +1,124 @@
+header {
+  border-bottom: 1px solid $border-headers;
+  .container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width:768px) {
+      flex-direction: row;
+    }
+  }
+  
+  .nav {
+    padding-top: 15px;
+    padding-bottom: 14px;
+    margin-right: auto;
+    @media screen and (min-width:768px) {
+      padding-top: 0;
+      padding-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+  .navigator {
+    display: none;
+    @media screen and (min-width:768px) {
+      display: flex;
+    }
+  }
+  .navigator-list {
+    position: relative;
+    &:not(:last-child){
+      margin-right: 50px;
+    }
+  }
+  .contacts {
+      display: none;
+    @media screen and (min-width:768px) {
+      display: block;
+      margin-left: auto;
+    }
+    @media screen and (min-width:1200px) {
+      @include flex (flex, flex-end, center);
+      flex-wrap: wrap;
+    }
+  }
+  .navigator-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $text-color;
+  }
+  .contacts-list{
+    &:first-child {
+      margin-right: 40px;
+      @media screen and (min-width:768px) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      @media screen and (min-width:1200px) {
+        margin-bottom: 0;
+        margin-right: 40px;
+      }
+    }
+  }
+
+  .logo {
+    margin-right: 93px;
+    color:$logo-color-header-second;
+    @media screen and (min-width:768px) {
+      margin-right: 88px;
+    }
+    @media screen and (min-width:1200px) {
+      margin-right: 93px;
+    }
+  }
+  .contact-link {
+    color: $link-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+  .contact {
+    color: $link-color;
+    position: relative;
+  }
+  .change_svg {
+    fill: $svg-color;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: fill 250ms $cub;
+  }
+  .change{
+    transition: color 250ms $cub;
+    &:hover, &:focus{
+      color:$text-hover;
+    }
+    &:hover .change_svg, &:focus .change_svg {
+      fill:$svg-hover;
+    }
+  }
+  .underline {
+    color: $text-hover;
+    &:after {
+      content: "";
+      background: $text-hover;
+      border-radius: 2px;
+      width: 100%;
+      height: 4px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: calc(100% - 4px);
+      color: $text-hover
+    }
+  }
+}

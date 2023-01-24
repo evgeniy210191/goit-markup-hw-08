@@ -1,0 +1,126 @@
+.menu-toggle{
+  position: absolute;
+  z-index: 2;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  right:0;
+  top:50%;
+  transform: translateY(-50%);
+  margin-right: 8px;
+  &:hover .button-menu, &:focus .button-menu{
+    fill:$svg-hover;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &.is-open .close-menu{
+    display: block;
+  } 
+  &.is-open .open-menu{
+    display: none;
+  }
+  &.is-open+.backdrop-menu{
+    @media screen and (min-width:200px) and (max-width:768px){
+      position: fixed;
+      display: block;
+      top:0;
+      left: 0;
+      background: $white;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.backdrop-menu{
+  display: none;
+  .presence{
+    color:$text-hover
+  }
+  .mobile-menu{
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    @media screen and (min-width:480px){
+      width:480px
+    }
+  }
+}
+.mob-nav {
+  .list-mob {
+    &:not(:last-child) {
+      padding-bottom: 35px;
+    }
+  }
+  .mob-link {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    color: $text-color
+  }
+}
+
+.mob-contacts {
+  margin-top: auto;
+}
+.social-mob {
+  margin-top: 64px;
+  display: flex;
+}
+.contacts-mob {
+  &:not(:last-child){
+    padding-bottom: 32px;
+  }
+ .mail-mob {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    color: $link-color;
+  } 
+  .tel-mob{
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: $text-hover
+  }
+}
+
+.social-mobile {
+  position: relative;
+  &:not(:last-child){
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right:1px solid rgba(33, 33, 33, 0.2)
+  }
+  .social-link{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $text-hover;
+  }
+}
+
+.close-menu{
+    display: none;
+  } 
+.button-menu{
+  transition: fill 250ms $cub;
+  width: 22px;
+  height: 18px;
+}
