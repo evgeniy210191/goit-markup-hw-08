@@ -1426,9 +1426,6 @@ footer .subscribe::placeholder {
 .backdrop-menu {
   display: none;
 }
-.backdrop-menu .presence {
-  color: #2196F3;
-}
 .backdrop-menu .mobile-menu {
   width: 100%;
   height: 100%;
@@ -1460,6 +1457,9 @@ footer .subscribe::placeholder {
   line-height: 47px;
   letter-spacing: 0.02em;
   color: #212121;
+}
+.mob-nav .presence {
+  color: #2196F3;
 }
 
 .mob-contacts {

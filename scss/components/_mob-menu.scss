@@ -43,9 +43,7 @@
 }
 .backdrop-menu{
   display: none;
-  .presence{
-    color:$text-hover
-  }
+
   .mobile-menu{
     width: 100%;
     height: 100%;
@@ -73,6 +71,9 @@
     line-height: 47px;
     letter-spacing: 0.02em;
     color: $text-color
+  }
+    .presence{
+    color:$text-hover
   }
 }
 
