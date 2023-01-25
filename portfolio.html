@@ -17,6 +17,39 @@
     <div class="container">
       <nav class="nav">
         <a href="./index.html" class="logo"><span class="logo-span">Web</span>Studio</a>
+          <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" id="button-nav">
+            <svg class="button-menu">
+              <use class="open-menu" xlink:href="svg/sprite.svg#open"></use>
+              <use class="close-menu" xlink:href="svg/sprite.svg#close"></use>
+            </svg>
+          </button>
+          <div class="backdrop-menu">
+            <div class="mobile-menu">
+              <ul class="mob-nav">
+                <li class="list-mob"><a class="mob-link change" href="./index.html">Студія</a></li>
+                <li class="list-mob"><a class="mob-link change presence" href="#">Портфоліо</a></li>
+                <li class="list-mob"><a class="mob-link change" href="#contacts">Контакти</a></li>
+              </ul>
+              <ul class="mob-contacts">
+                <li class="contacts-mob">
+                  <a class="tel-mob change" href="tel:+380961111111">
+                    +38 096 111 11 11
+                  </a>
+                </li>
+                <li class="contacts-mob">
+                  <a class="mail-mob change" href="mailto:info@devstudio.com">
+                    info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+              <ul class="social-mob">
+                <li class="social-mobile"><a class="social-link" href="#">Twitter</a></li>
+                <li class="social-mobile"><a class="social-link" href="#">Instagram</a></li>
+                <li class="social-mobile"><a class="social-link" href="#">Facebook</a></li>
+                <li class="social-mobile"><a class="social-link" href="#">Linkedin</a></li>
+              </ul>
+            </div>
+          </div>
         <ul class="navigator">
           <li class="navigator-list"><a class="navigator-link change" href="./index.html">Студія</a></li>
           <li class="navigator-list"><a class="navigator-link change underline" href="#">Портфоліо</a></li>
@@ -248,13 +281,14 @@
           <button type="submit" class="order">
             Підписатися
             <svg class="sprite-button" width="24px" height="24px">
-              <use xlink:href="input/input.svg#telegram"></use>
+              <use xlink:href="svg/sprite.svg#telegram"></use>
             </svg>
           </button>
         </form>
       </div>
     </div>
   </footer>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
