@@ -15,11 +15,15 @@
       display: flex;
   }
   .peculiarity{
+    text-align: center;
     font-weight: 700;
     text-transform: uppercase;
     color: $text-color;
     line-height: 1.16;
     margin-bottom: 10px;
+    @media screen and (min-width:768px) {
+      text-align: left;
+    }
   }
 
   .groop {
