@@ -151,7 +151,10 @@
         <h2 class="header-section">Наша команда</h2>
         <ul class="team">
           <li class="one_teame">
-            <img src="images/img.jpg" alt="Igor" width="270">
+            <picture>
+              <source srcset="images/img@2x.webp 2x" type="image/webp" />
+              <img src="images/img.jpg" alt="Igor" width="270">
+            </picture>
             <div class="wrapper-teame">
               <h3 class="teams">Ігор Дем'яненко</h3>
               <p class="specialist">Product Designer</p>
@@ -188,7 +191,10 @@
             </div>
           </li>
           <li class="one_teame">
-            <img src="images/img(1).jpg" alt="Ольга Рєпіна" width="270">
+            <picture>
+              <source srcset="images/img(1)@2x.webp 2x" type="image/webp" />
+              <img src="images/img(1).jpg" alt="Репіна">
+            </picture>
             <div class="wrapper-teame">
               <h3 class="teams">Ольга Рєпіна</h3>
               <p class="specialist">Frontend Developer</p>
@@ -225,7 +231,10 @@
             </div>
           </li>
           <li class="one_teame">
-            <img src="images/img(2).jpg" alt="Микола Тарасов" width="270">
+            <picture>
+              <source type="image/webp" srcset="images/img(2)@2x.webp 2x">
+              <img src="images/img(2).jpg" alt="Микола Тарасов" width="270">
+            </picture>
             <div class="wrapper-teame">
               <h3 class="teams">Микола Тарасов</h3>
               <p class="specialist">Marketing</p>
@@ -261,7 +270,10 @@
             </div>
           </li>
           <li class="one_teame">
-            <img src="images/img(3).jpg" alt="Михайло Єрмаков" width="270">
+            <picture>
+              <source type="image/webp" srcset="images/img(3)@2x.webp 2x">
+              <img src="images/img(3).jpg" alt="Михайло Єрмаков" width="270">
+            </picture>
             <div class="wrapper-teame">
               <h3 class="teams">Михайло Єрмаков</h3>
               <p class="specialist">Product Designer</p>
@@ -302,7 +314,7 @@
     </section>
     <section class="company">
       <div class="container">
-        <h2  class="header-section">Постійні клієнти</h2>
+        <h2 class="header-section">Постійні клієнти</h2>
         <ul class="regular_customers">
           <li class="regular_customer">
             <a class="social" href="#">
@@ -356,10 +368,12 @@
         <a href="#" class="logo logo_in_footer"><span class="logo-span">Web</span>Studio</a>
         <address class="address">
           <ul>
-            <li class="address-link"><a class="change link-map" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" id="contacts" target="_blank"
-                rel="noopener noreferrer">м. Київ, пр-т Лесі Українки, 26</a></li>
-            <li class="address-link"><a class="contact_in_footer change" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-            <li class="address-link"><a class="contact_in_footer change" href="tel:+380961111111">+38 096 111 11 11</a></li>
+            <li class="address-link"><a class="change link-map" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                id="contacts" target="_blank" rel="noopener noreferrer">м. Київ, пр-т Лесі Українки, 26</a></li>
+            <li class="address-link"><a class="contact_in_footer change"
+                href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+            <li class="address-link"><a class="contact_in_footer change" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
           </ul>
         </address>
       </div>
@@ -415,7 +429,7 @@
       <div id="close">
         <svg width="11px" height="11px" class="close-svg">
           <use xlink:href="input/input.svg#close">
-            </use>
+          </use>
         </svg>
       </div>
       <b class="header-modal">Залиште свої дані, ми вам передзвонимо</b>
@@ -454,7 +468,8 @@
         </div>
         <div class="check">
           <input type="checkbox" class="checkbox" name="checkbox" id="ok">
-          <label for="ok" class="label-check">Погоджуюся з розсилкою та приймаю <a class="condition" href="./">Умові договору</a></label>
+          <label for="ok" class="label-check">Погоджуюся з розсилкою та приймаю <a class="condition" href="./">Умові
+              договору</a></label>
         </div>
         <button type="submit" class="submit-form order">Відправити</button>
       </form>

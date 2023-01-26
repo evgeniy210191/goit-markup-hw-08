@@ -59,6 +59,9 @@
     }
   }
   .portfolio{
+    picture{
+      width: 100%;
+    }
     @media screen and (min-width:768px) {
       display: grid;
       grid-template: 1fr 1fr/1fr 1fr;
@@ -73,8 +76,16 @@
     text-align: left;
     background-color: $white;
     font-size: 0;
+    &:not(:last-child){
+      margin-bottom: 30px;
+    }
     &:hover .about_product {
-      transform: translateY(-100%);
+      transform: translateY(0%);
+    }
+    @media screen and (min-width:768px) {
+      &:not(:last-child){
+        margin-bottom: 0;
+      }
     }
   }
   .poducts_headers {
@@ -92,17 +103,27 @@
     &:hover, &:focus {
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
+    @media screen and (min-width:768px){
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
   }
   .img_portfolio {
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width:768px) {
+      flex-grow: 1; 
+    }
   }
   .about_product {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
-    transform: translateY(100%);
+    transform: translateY(101%);
     background: rgba(33, 150, 243, 0.9);
     padding: 63px 24px;
     font-weight: 400;
@@ -111,5 +132,6 @@
     letter-spacing: 0.03em;
     color: $white;
     transition: transform 250ms $cub;
+    overflow-y: scroll;
   }
 }
