@@ -184,12 +184,10 @@
       width: 16px;
       height: 15px;
       position: absolute;
-      top: 50%;
+      top: 0%;
       left: 0;
       border: 2px solid $text-color;
       border-radius: 3px;
-      overflow: hidden;
-      transform: translateY(-50%);
     }
   }
   .condition {
