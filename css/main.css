@@ -451,9 +451,11 @@ header .underline:after {
   line-height: 1.9;
   letter-spacing: 0.03em;
 }
-.my-portfolio img {
-  width: 100%;
-  height: auto;
+@media screen and (max-width: 768px), (min-width: 1200px) {
+  .my-portfolio picture * {
+    width: 100%;
+    height: auto;
+  }
 }
 .my-portfolio .title_product {
   color: #212121;
@@ -518,7 +520,7 @@ header .underline:after {
 @media screen and (min-width: 768px) {
   .my-portfolio .portfolio {
     display: grid;
-    grid-template: 1fr 1fr/1fr 1fr;
+    grid-template: 1fr/1fr 1fr;
     -webkit-column-gap: 30px;
        -moz-column-gap: 30px;
             column-gap: 30px;
@@ -548,6 +550,9 @@ header .underline:after {
   }
 }
 .my-portfolio .poducts_headers {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;

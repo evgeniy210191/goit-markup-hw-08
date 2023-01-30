@@ -8,9 +8,12 @@
     line-height: 1.9;
     letter-spacing: 0.03em;
   }
-  img{
-    width: 100%;
-    height: auto;
+  picture *{
+    @media screen and (max-width: 768px), (min-width:1200px) {
+      width: 100%;
+      height: auto;
+    }
+
   }
   .title_product {
     color: $text-color;
@@ -64,7 +67,7 @@
     }
     @media screen and (min-width:768px) {
       display: grid;
-      grid-template: 1fr 1fr/1fr 1fr;
+      grid-template:1fr/1fr 1fr;
       column-gap: 30px;
       row-gap: 30px;
     }
@@ -89,6 +92,7 @@
     }
   }
   .poducts_headers {
+    flex-grow: 1;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
