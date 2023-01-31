@@ -451,11 +451,9 @@ header .underline:after {
   line-height: 1.9;
   letter-spacing: 0.03em;
 }
-@media screen and (max-width: 768px), (min-width: 1200px) {
-  .my-portfolio picture * {
-    width: 100%;
-    height: auto;
-  }
+.my-portfolio img {
+  width: 100%;
+  height: auto;
 }
 .my-portfolio .title_product {
   color: #212121;
@@ -593,13 +591,6 @@ header .underline:after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-@media screen and (min-width: 768px) {
-  .my-portfolio .img_portfolio {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-  }
 }
 .my-portfolio .about_product {
   position: absolute;

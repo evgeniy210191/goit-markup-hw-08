@@ -8,11 +8,9 @@
     line-height: 1.9;
     letter-spacing: 0.03em;
   }
-  picture *{
-    @media screen and (max-width: 768px), (min-width:1200px) {
+  img{
       width: 100%;
       height: auto;
-    }
 
   }
   .title_product {
@@ -118,9 +116,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    @media screen and (min-width:768px) {
-      flex-grow: 1; 
-    }
+
   }
   .about_product {
     position: absolute;
