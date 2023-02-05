@@ -873,8 +873,16 @@ header .underline:after {
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
+  .team .one_teame {
+    width: 354px;
+  }
   .team .one_teame:not(:last-child) {
     margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team .one_teame {
+    width: 270px;
   }
 }
 .team .links {
